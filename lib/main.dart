@@ -30,11 +30,10 @@ class _ChompGridState extends State<ChompGrid> {
     });
   }
 
-  Function checkIfBeyondLastClicked(int lastClickedIndex) {
+  Function checkIfBeyondLastClicked(int lastclicked) {
     return (index) =>
-        (index - 6 * (index ~/ 6)) <
-            (lastClickedIndex - 6 * (lastClickedIndex ~/ 6)) ||
-        index ~/ 6 > lastClickedIndex ~/ 6;
+        (index - 6 * (index ~/ 6)) < (lastclicked - 6 * (lastclicked ~/ 6)) ||
+        index ~/ 6 > lastclicked ~/ 6;
   }
 
   bool applyConstraints(int index) {
